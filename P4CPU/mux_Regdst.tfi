@@ -1,0 +1,12 @@
+
+
+
+// Instantiate the module
+mux_Regdst instance_name (
+    .Instr(Instr), 
+    .In3(In3), 
+    .Select(Select), 
+    .Out(Out)
+    );
+
+

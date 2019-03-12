@@ -1,0 +1,75 @@
+Running: D:\ISE\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o E:/ISEproject/P6CPU3/test1_isim_beh.exe -prj E:/ISEproject/P6CPU3/test1_beh.prj work.test1 work.glbl 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Analyzing Verilog file "E:/ISEproject/P6CPU3/stall.v" into library work
+Analyzing Verilog file "E:/ISEproject/P6CPU3/rf.v" into library work
+Analyzing Verilog file "E:/ISEproject/P6CPU3/pc.v" into library work
+Analyzing Verilog file "E:/ISEproject/P6CPU3/npc.v" into library work
+Analyzing Verilog file "E:/ISEproject/P6CPU3/mux.v" into library work
+Analyzing Verilog file "E:/ISEproject/P6CPU3/MtoW.v" into library work
+Analyzing Verilog file "E:/ISEproject/P6CPU3/im.v" into library work
+Analyzing Verilog file "E:/ISEproject/P6CPU3/ifu.v" into library work
+Analyzing Verilog file "E:/ISEproject/P6CPU3/FtoD.v" into library work
+Analyzing Verilog file "E:/ISEproject/P6CPU3/ext.v" into library work
+Analyzing Verilog file "E:/ISEproject/P6CPU3/EtoM.v" into library work
+Analyzing Verilog file "E:/ISEproject/P6CPU3/DtoE.v" into library work
+Analyzing Verilog file "E:/ISEproject/P6CPU3/dm.v" into library work
+Analyzing Verilog file "E:/ISEproject/P6CPU3/controller.v" into library work
+Analyzing Verilog file "E:/ISEproject/P6CPU3/coder.v" into library work
+Analyzing Verilog file "E:/ISEproject/P6CPU3/cmp.v" into library work
+Analyzing Verilog file "E:/ISEproject/P6CPU3/bypass.v" into library work
+Analyzing Verilog file "E:/ISEproject/P6CPU3/be.v" into library work
+Analyzing Verilog file "E:/ISEproject/P6CPU3/alu.v" into library work
+Analyzing Verilog file "E:/ISEproject/P6CPU3/hazard.v" into library work
+Analyzing Verilog file "E:/ISEproject/P6CPU3/datapath.v" into library work
+Analyzing Verilog file "E:/ISEproject/P6CPU3/mips.v" into library work
+Analyzing Verilog file "E:/ISEproject/P6CPU3/test1.v" into library work
+Analyzing Verilog file "D:/ISE/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+WARNING:HDLCompiler:1016 - "E:/ISEproject/P6CPU3/datapath.v" Line 133: Port memtoreg is not connected to this instance
+WARNING:HDLCompiler:1016 - "E:/ISEproject/P6CPU3/datapath.v" Line 145: Port in5 is not connected to this instance
+WARNING:HDLCompiler:1016 - "E:/ISEproject/P6CPU3/datapath.v" Line 158: Port in5 is not connected to this instance
+WARNING:HDLCompiler:1016 - "E:/ISEproject/P6CPU3/datapath.v" Line 221: Port isbeq is not connected to this instance
+WARNING:HDLCompiler:1016 - "E:/ISEproject/P6CPU3/datapath.v" Line 228: Port in4 is not connected to this instance
+WARNING:HDLCompiler:1016 - "E:/ISEproject/P6CPU3/datapath.v" Line 241: Port in4 is not connected to this instance
+WARNING:HDLCompiler:1016 - "E:/ISEproject/P6CPU3/datapath.v" Line 292: Port isbeq is not connected to this instance
+WARNING:HDLCompiler:1016 - "E:/ISEproject/P6CPU3/datapath.v" Line 298: Port in2 is not connected to this instance
+WARNING:HDLCompiler:1016 - "E:/ISEproject/P6CPU3/datapath.v" Line 343: Port isbeq is not connected to this instance
+Completed static elaboration
+Compiling module mux_pc
+Compiling module pc
+Compiling module ifu
+Compiling module im
+Compiling module FtoD
+Compiling module controller
+Compiling module mux_bypass
+Compiling module npc
+Compiling module rf
+Compiling module cmp
+Compiling module DtoE
+Compiling module alu
+Compiling module mux_alub
+Compiling module mux_alua
+Compiling module EtoM
+Compiling module be
+Compiling module dm
+Compiling module MtoW
+Compiling module ext
+Compiling module mux_rfwd
+Compiling module datapath
+Compiling module coder
+Compiling module stall
+Compiling module bypass
+Compiling module hazard
+Compiling module mips
+Compiling module test1
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 21 sub-compilation(s) to finish...
+WARNING:Simulator - Unable to copy libPortabilityNOSH.dll to the simulation executable directory: boost::filesystem::copy_file: 系统找不到指定的路径。, "isim\test1_isim_beh.exe.sim\libPortability.dll".
+Compiled 28 Verilog Units
+Built simulation executable E:/ISEproject/P6CPU3/test1_isim_beh.exe
+Fuse Memory Usage: 32712 KB
+Fuse CPU Usage: 1030 ms

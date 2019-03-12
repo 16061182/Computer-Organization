@@ -1,0 +1,13 @@
+
+
+
+// Instantiate the module
+alu instance_name (
+    .alu_Data1(alu_Data1), 
+    .alu_Data2(alu_Data2), 
+    .alu_ALUOp(alu_ALUOp), 
+    .alu_Zero(alu_Zero), 
+    .alu_Out(alu_Out)
+    );
+
+

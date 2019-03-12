@@ -1,0 +1,13 @@
+
+
+
+// Instantiate the module
+npc instance_name (
+    .pc_sel(pc_sel), 
+    .ir_d(ir_d), 
+    .pc4_d(pc4_d), 
+    .rsd_out(rsd_out), 
+    .npc(npc)
+    );
+
+

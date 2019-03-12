@@ -1,0 +1,335 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> Reading design: mips.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "mips.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "mips"
+Output Format                      : NGC
+Target Device                      : xa3s50-4-vqg100
+
+---- Source Options
+Top Module Name                    : mips
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "pccal.v" in library work
+Compiling verilog file "pc.v" in library work
+Module <pccal> compiled
+Compiling verilog file "mux.v" in library work
+Module <pc> compiled
+Module <mux_Regdst> compiled
+Module <mux_MemtoReg> compiled
+Module <mux_ALUSrc> compiled
+Compiling verilog file "im.v" in library work
+Module <mux_Sign> compiled
+Compiling verilog file "grf.v" in library work
+Module <im> compiled
+Compiling verilog file "ext.v" in library work
+Module <grf> compiled
+Compiling verilog file "dm.v" in library work
+Module <ext> compiled
+Compiling verilog file "alu.v" in library work
+Module <dm> compiled
+Compiling verilog file "datapath.v" in library work
+Module <alu> compiled
+Compiling verilog file "controller.v" in library work
+Module <datapath> compiled
+Compiling verilog file "mips.v" in library work
+Module <controller> compiled
+Module <mips> compiled
+No errors in compilation
+Analysis of file <"mips.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <mips> in library <work>.
+
+Analyzing hierarchy for module <datapath> in library <work>.
+
+Analyzing hierarchy for module <controller> in library <work>.
+
+Analyzing hierarchy for module <pc> in library <work>.
+
+Analyzing hierarchy for module <im> in library <work>.
+
+Analyzing hierarchy for module <pccal> in library <work>.
+
+Analyzing hierarchy for module <mux_Regdst> in library <work> with parameters.
+	reg_ra = "00000000000000000000000000011111"
+
+Analyzing hierarchy for module <grf> in library <work>.
+
+Analyzing hierarchy for module <ext> in library <work>.
+
+Analyzing hierarchy for module <mux_Sign> in library <work>.
+
+Analyzing hierarchy for module <mux_ALUSrc> in library <work>.
+
+Analyzing hierarchy for module <alu> in library <work>.
+
+Analyzing hierarchy for module <dm> in library <work>.
+
+Analyzing hierarchy for module <mux_MemtoReg> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <mips>.
+Module <mips> is correct for synthesis.
+ 
+Analyzing module <datapath> in library <work>.
+WARNING:Xst:852 - "datapath.v" line 80: Unconnected input port 'In3' of instance 'MUX_REGDST' is tied to GND.
+WARNING:Xst:852 - "datapath.v" line 107: Unconnected input port 'In3' of instance 'MUX_SIGN' is tied to GND.
+WARNING:Xst:852 - "datapath.v" line 142: Unconnected input port 'In3' of instance 'MUX_MEMTOREG' is tied to GND.
+Module <datapath> is correct for synthesis.
+ 
+Analyzing module <pc> in library <work>.
+Module <pc> is correct for synthesis.
+ 
+Analyzing module <im> in library <work>.
+INFO:Xst:2546 - "im.v" line 28: reading initialization file "code.txt".
+WARNING:Xst:2319 - "im.v" line 28: Signal instrmemory in initial block is partially initialized. The initialization will be ignored.
+Module <im> is correct for synthesis.
+ 
+Analyzing module <pccal> in library <work>.
+Module <pccal> is correct for synthesis.
+ 
+Analyzing module <mux_Regdst> in library <work>.
+	reg_ra = 32'sb00000000000000000000000000011111
+Module <mux_Regdst> is correct for synthesis.
+ 
+Analyzing module <grf> in library <work>.
+WARNING:Xst:2323 - "grf.v" line 56: Parameter 2 is not constant in call of system task $display.
+WARNING:Xst:2323 - "grf.v" line 56: Parameter 3 is not constant in call of system task $display.
+WARNING:Xst:2323 - "grf.v" line 56: Parameter 4 is not constant in call of system task $display.
+"grf.v" line 56: $display : @%h: $%d <= %h
+Module <grf> is correct for synthesis.
+ 
+Analyzing module <ext> in library <work>.
+Module <ext> is correct for synthesis.
+ 
+Analyzing module <mux_Sign> in library <work>.
+Module <mux_Sign> is correct for synthesis.
+ 
+Analyzing module <mux_ALUSrc> in library <work>.
+Module <mux_ALUSrc> is correct for synthesis.
+ 
+Analyzing module <alu> in library <work>.
+WARNING:Xst:2323 - "alu.v" line 41: Parameter 2 is not constant in call of system task $display.
+"alu.v" line 41: $display : Data1:%d
+WARNING:Xst:2323 - "alu.v" line 42: Parameter 2 is not constant in call of system task $display.
+"alu.v" line 42: $display : Data2:%d
+Module <alu> is correct for synthesis.
+ 
+Analyzing module <dm> in library <work>.
+WARNING:Xst:2323 - "dm.v" line 48: Parameter 2 is not constant in call of system task $display.
+WARNING:Xst:2323 - "dm.v" line 48: Parameter 3 is not constant in call of system task $display.
+WARNING:Xst:2323 - "dm.v" line 48: Parameter 4 is not constant in call of system task $display.
+"dm.v" line 48: $display : @%h:*%h<=%h
+Module <dm> is correct for synthesis.
+ 
+Analyzing module <mux_MemtoReg> in library <work>.
+Module <mux_MemtoReg> is correct for synthesis.
+ 
+Analyzing module <controller> in library <work>.
+Module <controller> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+INFO:Xst:2679 - Register <i> in unit <grf> has a constant value of 100000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <i> in unit <dm> has a constant value of 10000000000 during circuit operation. The register is replaced by logic.
+
+Synthesizing Unit <controller>.
+    Related source file is "controller.v".
+Unit <controller> synthesized.
+
+
+Synthesizing Unit <pc>.
+    Related source file is "pc.v".
+    Found 32-bit register for signal <out>.
+    Summary:
+	inferred  32 D-type flip-flop(s).
+Unit <pc> synthesized.
+
+
+Synthesizing Unit <im>.
+    Related source file is "im.v".
+WARNING:Xst:647 - Input <im_pc<31:12>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <im_pc<1:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:653 - Signal <instrmemory> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000000000000000.
+Unit <im> synthesized.
+
+
+Synthesizing Unit <pccal>.
+    Related source file is "pccal.v".
+WARNING:Xst:647 - Input <offset<31:30>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 32-bit 4-to-1 multiplexer for signal <next_pc>.
+    Found 32-bit adder for signal <next_pc$addsub0000> created at line 32.
+    Found 32-bit adder carry out for signal <next_pc$addsub0001> created at line 32.
+    Found 32-bit adder for signal <pc_plus_4$add0000> created at line 31.
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred  32 Multiplexer(s).
+Unit <pccal> synthesized.
+
+
+Synthesizing Unit <mux_Regdst>.
+    Related source file is "mux.v".
+WARNING:Xst:647 - Input <Instr<31:21>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Instr<10:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 5-bit 4-to-1 multiplexer for signal <Out>.
+    Summary:
+	inferred   5 Multiplexer(s).
+Unit <mux_Regdst> synthesized.
+
+
+Synthesizing Unit <grf>.
+    Related source file is "grf.v".
+WARNING:Xst:647 - Input <grf_instr<31:26>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <grf_instr<15:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <grf_pc> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 32-bit register for signal <rdata1>.
+    Found 32-bit register for signal <rdata2>.
+    Found 1024-bit register for signal <regfile>.
+INFO:Xst:738 - HDL ADVISOR - 1024 flip-flops were inferred for signal <regfile>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+    Summary:
+	inferred 1088 D-type flip-flop(s).
+	inferred  64 Multiplexer(s).
+Unit <grf> synthesized.
+
+
+Synthesizing Unit <ext>.
+    Related source file is "ext.v".
+WARNING:Xst:647 - Input <ext_instr<31:26>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <ext_pc<27:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+Unit <ext> synthesized.
+
+
+Synthesizing Unit <mux_Sign>.
+    Related source file is "mux.v".
+    Found 32-bit 4-to-1 multiplexer for signal <Out>.
+    Summary:
+	inferred  32 Multiplexer(s).
+Unit <mux_Sign> synthesized.
+
+
+Synthesizing Unit <mux_ALUSrc>.
+    Related source file is "mux.v".
+Unit <mux_ALUSrc> synthesized.
+
+
+Synthesizing Unit <alu>.
+    Related source file is "alu.v".
+    Found 32-bit addsub for signal <alu_Out$addsub0000>.
+    Found 32-bit comparator equal for signal <alu_Zero$cmp_eq0000> created at line 29.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   1 Comparator(s).
+Unit <alu> synthesized.
+
+
+Synthesizing Unit <dm>.
+    Related source file is "dm.v".
+WARNING:Xst:647 - Input <dm_Addr<31:12>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <dm_Addr<1:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <dm_pc> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1780 - Signal <addr> is never used or assigned. This unconnected signal will be trimmed during the optimization process.

@@ -1,0 +1,3 @@
+verilog work "stall.v"
+verilog work "bypass.v"
+verilog work "hazard.v"

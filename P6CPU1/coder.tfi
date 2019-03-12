@@ -1,0 +1,31 @@
+
+
+
+// Instantiate the module
+coder instance_name (
+    .clk(clk), 
+    .reset(reset), 
+    .ir(ir), 
+    .tuse_rs0(tuse_rs0), 
+    .tuse_rs1(tuse_rs1), 
+    .tuse_rt0(tuse_rt0), 
+    .tuse_rt1(tuse_rt1), 
+    .tuse_rt2(tuse_rt2), 
+    .a1_d(a1_d), 
+    .a2_d(a2_d), 
+    .a3_d(a3_d), 
+    .a1_e(a1_e), 
+    .a2_e(a2_e), 
+    .a3_e(a3_e), 
+    .a1_m(a1_m), 
+    .a2_m(a2_m), 
+    .a3_m(a3_m), 
+    .a1_w(a1_w), 
+    .a2_w(a2_w), 
+    .a3_w(a3_w), 
+    .res_e_e(res_e_e), 
+    .res_m_m(res_m_m), 
+    .res_w_w(res_w_w)
+    );
+
+

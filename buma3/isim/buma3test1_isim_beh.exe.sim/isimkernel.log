@@ -1,0 +1,28 @@
+Command line:
+   buma3test1_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  50737
+
+Thu Nov 23 13:48:44 2017
+
+
+ Elaboration Time: 0.21875 sec
+
+ Current Memory Usage: 850.985 Meg
+
+ Total Signals          : 19
+ Total Nets             : 110
+ Total Signal Drivers   : 9
+ Total Blocks           : 3
+ Total Primitive Blocks : 2
+ Total Processes        : 13
+ Total Traceable Variables  : 23
+ Total Scalar Nets and Variables : 319
+
+ Total Simulation Time: 0.25 sec
+
+ Current Memory Usage: 850.985 Meg
+
+Thu Nov 23 13:48:51 2017
+

@@ -1,0 +1,11 @@
+
+
+
+// Instantiate the module
+mux_rfwa instance_name (
+    .ir_w(ir_w), 
+    .in3(in3), 
+    .out(out)
+    );
+
+

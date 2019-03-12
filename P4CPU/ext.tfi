@@ -1,0 +1,13 @@
+
+
+
+// Instantiate the module
+ext instance_name (
+    .ext_Data1(ext_Data1), 
+    .ext_Data2(ext_Data2), 
+    .ext_Out1(ext_Out1), 
+    .ext_Out2(ext_Out2), 
+    .ext_Out3(ext_Out3)
+    );
+
+

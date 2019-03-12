@@ -1,0 +1,14 @@
+
+
+
+// Instantiate the module
+mux_alub instance_name (
+    .in0(in0), 
+    .ext0_e(ext0_e), 
+    .ext1_e(ext1_e), 
+    .in3(in3), 
+    .ir_e(ir_e), 
+    .out(out)
+    );
+
+

@@ -1,0 +1,16 @@
+
+
+
+// Instantiate the module
+dm instance_name (
+    .dm_pc(dm_pc), 
+    .dm_clk(dm_clk), 
+    .dm_reset(dm_reset), 
+    .dm_MemRead(dm_MemRead), 
+    .dm_MemWrite(dm_MemWrite), 
+    .dm_Addr(dm_Addr), 
+    .dm_Wdata(dm_Wdata), 
+    .dm_Rdata(dm_Rdata)
+    );
+
+

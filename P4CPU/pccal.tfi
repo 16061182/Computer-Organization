@@ -1,0 +1,15 @@
+
+
+
+// Instantiate the module
+pccal instance_name (
+    .pc(pc), 
+    .offset(offset), 
+    .zero(zero), 
+    .branch0(branch0), 
+    .branch1(branch1), 
+    .pc_plus_4(pc_plus_4), 
+    .next_pc(next_pc)
+    );
+
+

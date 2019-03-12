@@ -1,0 +1,12 @@
+
+
+
+// Instantiate the module
+alu instance_name (
+    .numa(numa), 
+    .numb(numb), 
+    .aluop(aluop), 
+    .aluout(aluout)
+    );
+
+

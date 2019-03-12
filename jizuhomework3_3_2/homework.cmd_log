@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "E:/ISEproject/jizuhomework3_3_2/homework.xst" -ofn "E:/ISEproject/jizuhomework3_3_2/homework.syr" 

@@ -1,0 +1,12 @@
+
+
+
+// Instantiate the module
+ext instance_name (
+    .dmout_w(dmout_w), 
+    .aluout_w(aluout_w), 
+    .ext_option(ext_option), 
+    .extout(extout)
+    );
+
+

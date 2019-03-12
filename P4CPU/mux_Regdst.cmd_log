@@ -1,0 +1,5 @@
+vhdtdtfi -lang verilog -prj P4CPU -o E:/ISEproject/P4CPU/mux_Regdst.tfi -lib work E:/ISEproject/P4CPU//mux.v -module mux_Regdst -template D:/ISE/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 
+vhdtdtfi -lang verilog -prj P4CPU -o E:/ISEproject/P4CPU/mux_Regdst.tfi -lib work E:/ISEproject/P4CPU//mux.v -module mux_Regdst -template D:/ISE/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 
+vhdtdtfi -lib work E:/ISEproject/P4CPU/mux.v -lang verilog -prj P4CPU -o mux_Regdst.spl -module mux_Regdst -template D:/ISE/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family aspartan3 mux_Regdst.spl E:/ISEproject/P4CPU/mux_Regdst.sym 
+vhdtdtfi -lang verilog -prj P4CPU -o E:/ISEproject/P4CPU/mux_Regdst.tfi -lib work E:/ISEproject/P4CPU//mux.v -module mux_Regdst -template D:/ISE/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 

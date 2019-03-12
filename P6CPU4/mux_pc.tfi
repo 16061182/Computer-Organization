@@ -1,0 +1,12 @@
+
+
+
+// Instantiate the module
+mux_pc instance_name (
+    .in0(in0), 
+    .in1(in1), 
+    .jump(jump), 
+    .pcin(pcin)
+    );
+
+

@@ -1,0 +1,5 @@
+set -tmpdir "E:/ISEproject/P6CPU4/xst/projnav.tmp"
+set -xsthdpdir "E:/ISEproject/P6CPU4/xst"
+elaborate
+-ifn xalu.prj
+-ifmt mixed

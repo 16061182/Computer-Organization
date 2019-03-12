@@ -1,0 +1,579 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Reading design: buma.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "buma.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "buma"
+Output Format                      : NGC
+Target Device                      : xa3s50-4-vqg100
+
+---- Source Options
+Top Module Name                    : buma
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "buma.v" in library work
+Module <buma> compiled
+No errors in compilation
+Analysis of file <"buma.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <buma> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <buma>.
+WARNING:Xst:863 - "buma.v" line 22: Name conflict (<a> and <A>, renaming a as a_rnm0).
+WARNING:Xst:863 - "buma.v" line 23: Name conflict (<b> and <B>, renaming b as b_rnm0).
+Module <buma> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <buma>.
+    Related source file is "buma.v".
+WARNING:Xst:1306 - Output <P> is never assigned.
+WARNING:Xst:646 - Signal <d> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <c> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <b_rnm0> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <a_rnm0> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+INFO:Xst:1608 - Relative priorities of control signals on register <O> differ from those commonly found in the selected device family. This will result in additional logic around the register.
+WARNING:Xst:737 - Found 32-bit latch for signal <flag>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <isout>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <O>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 4-bit adder for signal <$add0000> created at line 64.
+    Found 4-bit adder for signal <$add0001> created at line 65.
+    Found 32-bit 4-to-1 multiplexer for signal <$mux0000>.
+    Found 32-bit 4-to-1 multiplexer for signal <flag$mux0000>.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred 224 Multiplexer(s).
+Unit <buma> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 2
+ 4-bit adder                                           : 2
+# Latches                                              : 3
+ 1-bit latch                                           : 1
+ 32-bit latch                                          : 2
+# Multiplexers                                         : 7
+ 32-bit 4-to-1 multiplexer                             : 7
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 2
+ 4-bit adder                                           : 2
+# Latches                                              : 3
+ 1-bit latch                                           : 1
+ 32-bit latch                                          : 2
+# Multiplexers                                         : 7
+ 32-bit 4-to-1 multiplexer                             : 7
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <buma> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block buma, actual ratio is 26.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : buma.ngr
+Top Level Output File Name         : buma
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 13
+
+Cell Usage :
+# BELS                             : 394
+#      GND                         : 1
+#      LUT2                        : 47
+#      LUT3                        : 54
+#      LUT3_D                      : 1
+#      LUT3_L                      : 6
+#      LUT4                        : 229
+#      LUT4_D                      : 14
+#      LUT4_L                      : 3
+#      MUXCY                       : 34
+#      MUXF5                       : 4
+#      VCC                         : 1
+# FlipFlops/Latches                : 65
+#      LDCPE                       : 65
+# Clock Buffers                    : 2
+#      BUFG                        : 2
+# IO Buffers                       : 9
+#      IBUF                        : 8
+#      OBUF                        : 1
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : xa3s50vqg100-4 
+
+ Number of Slices:                      197  out of    768    25%  
+ Number of Slice Flip Flops:             64  out of   1536     4%  
+ Number of 4 input LUTs:                354  out of   1536    23%  
+ Number of IOs:                          13
+ Number of bonded IOBs:                   9  out of     63    14%  
+    IOB Flip Flops:                       1
+ Number of GCLKs:                         2  out of      8    25%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+B<3>                               | IBUF+BUFG              | 1     |
+flag_not00051(flag_not00051:O)     | BUFG(*)(isout_0)       | 64    |
+-----------------------------------+------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+---------------------------------------+------------------------+-------+
+Control Signal                         | Buffer(FF name)        | Load  |
+---------------------------------------+------------------------+-------+
+O__or0000(O__or00001:O)                | NONE(O)                | 1     |
+O__or0001(O__or00011:O)                | NONE(O)                | 1     |
+flag_0__and0000(flag_0__and00001:O)    | NONE(flag_0)           | 1     |
+flag_0__and0001(flag_0__and00011:O)    | NONE(flag_0)           | 1     |
+flag_10__and0000(flag_10__and00001:O)  | NONE(flag_10)          | 1     |
+flag_10__and0001(flag_10__and00011:O)  | NONE(flag_10)          | 1     |
+flag_11__and0000(flag_11__and00001:O)  | NONE(flag_11)          | 1     |
+flag_11__and0001(flag_11__and00011:O)  | NONE(flag_11)          | 1     |
+flag_12__and0000(flag_12__and00001:O)  | NONE(flag_12)          | 1     |
+flag_12__and0001(flag_12__and00011:O)  | NONE(flag_12)          | 1     |
+flag_13__and0000(flag_13__and00001:O)  | NONE(flag_13)          | 1     |
+flag_13__and0001(flag_13__and00011:O)  | NONE(flag_13)          | 1     |
+flag_14__and0000(flag_14__and00001:O)  | NONE(flag_14)          | 1     |
+flag_14__and0001(flag_14__and00011:O)  | NONE(flag_14)          | 1     |
+flag_15__and0000(flag_15__and00001:O)  | NONE(flag_15)          | 1     |
+flag_15__and0001(flag_15__and00011:O)  | NONE(flag_15)          | 1     |
+flag_16__and0000(flag_16__and00001:O)  | NONE(flag_16)          | 1     |
+flag_16__and0001(flag_16__and00011:O)  | NONE(flag_16)          | 1     |
+flag_17__and0000(flag_17__and00001:O)  | NONE(flag_17)          | 1     |
+flag_17__and0001(flag_17__and00011:O)  | NONE(flag_17)          | 1     |
+flag_18__and0000(flag_18__and00001:O)  | NONE(flag_18)          | 1     |
+flag_18__and0001(flag_18__and00011:O)  | NONE(flag_18)          | 1     |
+flag_19__and0000(flag_19__and00001:O)  | NONE(flag_19)          | 1     |
+flag_19__and0001(flag_19__and00011:O)  | NONE(flag_19)          | 1     |
+flag_1__and0000(flag_1__and00001:O)    | NONE(flag_1)           | 1     |
+flag_1__and0001(flag_1__and00011:O)    | NONE(flag_1)           | 1     |
+flag_20__and0000(flag_20__and00001:O)  | NONE(flag_20)          | 1     |
+flag_20__and0001(flag_20__and00011:O)  | NONE(flag_20)          | 1     |
+flag_21__and0000(flag_21__and00001:O)  | NONE(flag_21)          | 1     |
+flag_21__and0001(flag_21__and00011:O)  | NONE(flag_21)          | 1     |
+flag_22__and0000(flag_22__and00001:O)  | NONE(flag_22)          | 1     |
+flag_22__and0001(flag_22__and00011:O)  | NONE(flag_22)          | 1     |
+flag_23__and0000(flag_23__and00001:O)  | NONE(flag_23)          | 1     |
+flag_23__and0001(flag_23__and00011:O)  | NONE(flag_23)          | 1     |
+flag_24__and0000(flag_24__and00001:O)  | NONE(flag_24)          | 1     |
+flag_24__and0001(flag_24__and00011:O)  | NONE(flag_24)          | 1     |
+flag_25__and0000(flag_25__and00001:O)  | NONE(flag_25)          | 1     |
+flag_25__and0001(flag_25__and00011:O)  | NONE(flag_25)          | 1     |
+flag_26__and0000(flag_26__and00001:O)  | NONE(flag_26)          | 1     |
+flag_26__and0001(flag_26__and00011:O)  | NONE(flag_26)          | 1     |
+flag_27__and0000(flag_27__and00001:O)  | NONE(flag_27)          | 1     |
+flag_27__and0001(flag_27__and00011:O)  | NONE(flag_27)          | 1     |
+flag_28__and0000(flag_28__and00001:O)  | NONE(flag_28)          | 1     |
+flag_28__and0001(flag_28__and00011:O)  | NONE(flag_28)          | 1     |
+flag_29__and0000(flag_29__and00001:O)  | NONE(flag_29)          | 1     |
+flag_29__and0001(flag_29__and00011:O)  | NONE(flag_29)          | 1     |
+flag_2__and0000(flag_2__and00001:O)    | NONE(flag_2)           | 1     |
+flag_2__and0001(flag_2__and00011:O)    | NONE(flag_2)           | 1     |
+flag_30__and0000(flag_30__and00001:O)  | NONE(flag_30)          | 1     |
+flag_30__and0001(flag_30__and00011:O)  | NONE(flag_30)          | 1     |
+flag_31__and0000(flag_31__and00001:O)  | NONE(flag_31)          | 1     |
+flag_31__and0001(flag_31__and00011:O)  | NONE(flag_31)          | 1     |
+flag_3__and0000(flag_3__and00001:O)    | NONE(flag_3)           | 1     |
+flag_3__and0001(flag_3__and00011:O)    | NONE(flag_3)           | 1     |
+flag_4__and0000(flag_4__and00001:O)    | NONE(flag_4)           | 1     |
+flag_4__and0001(flag_4__and00011:O)    | NONE(flag_4)           | 1     |
+flag_5__and0000(flag_5__and00001:O)    | NONE(flag_5)           | 1     |
+flag_5__and0001(flag_5__and00011:O)    | NONE(flag_5)           | 1     |
+flag_6__and0000(flag_6__and00001:O)    | NONE(flag_6)           | 1     |
+flag_6__and0001(flag_6__and00011:O)    | NONE(flag_6)           | 1     |
+flag_7__and0000(flag_7__and00001:O)    | NONE(flag_7)           | 1     |
+flag_7__and0001(flag_7__and00011:O)    | NONE(flag_7)           | 1     |
+flag_8__and0000(flag_8__and00001:O)    | NONE(flag_8)           | 1     |
+flag_8__and0001(flag_8__and00011:O)    | NONE(flag_8)           | 1     |
+flag_9__and0000(flag_9__and00001:O)    | NONE(flag_9)           | 1     |
+flag_9__and0001(flag_9__and00011:O)    | NONE(flag_9)           | 1     |
+isout_0__and0000(isout_0__and00001:O)  | NONE(isout_0)          | 1     |
+isout_0__and0001(isout_0__and00011:O)  | NONE(isout_0)          | 1     |
+isout_10__and0000(isout_10__and00002:O)| NONE(isout_10)         | 1     |
+isout_10__and0001(isout_10__and00011:O)| NONE(isout_10)         | 1     |
+isout_11__and0000(isout_11__and00001:O)| NONE(isout_11)         | 1     |
+isout_11__and0001(isout_11__and00011:O)| NONE(isout_11)         | 1     |
+isout_12__and0000(isout_12__and00001:O)| NONE(isout_12)         | 1     |
+isout_12__and0001(isout_12__and00011:O)| NONE(isout_12)         | 1     |
+isout_13__and0000(isout_13__and00001:O)| NONE(isout_13)         | 1     |
+isout_13__and0001(isout_13__and00011:O)| NONE(isout_13)         | 1     |
+isout_14__and0000(isout_14__and00001:O)| NONE(isout_14)         | 1     |
+isout_14__and0001(isout_14__and00011:O)| NONE(isout_14)         | 1     |
+isout_15__and0000(isout_15__and00001:O)| NONE(isout_15)         | 1     |
+isout_15__and0001(isout_15__and00011:O)| NONE(isout_15)         | 1     |
+isout_16__and0000(isout_16__and00001:O)| NONE(isout_16)         | 1     |
+isout_16__and0001(isout_16__and00011:O)| NONE(isout_16)         | 1     |
+isout_17__and0000(isout_17__and00001:O)| NONE(isout_17)         | 1     |
+isout_17__and0001(isout_17__and00011:O)| NONE(isout_17)         | 1     |
+isout_18__and0000(isout_18__and00001:O)| NONE(isout_18)         | 1     |
+isout_18__and0001(isout_18__and00011:O)| NONE(isout_18)         | 1     |
+isout_19__and0000(isout_19__and00001:O)| NONE(isout_19)         | 1     |
+isout_19__and0001(isout_19__and00011:O)| NONE(isout_19)         | 1     |
+isout_1__and0000(isout_1__and00001:O)  | NONE(isout_1)          | 1     |
+isout_1__and0001(isout_1__and00011:O)  | NONE(isout_1)          | 1     |
+isout_20__and0000(isout_20__and00001:O)| NONE(isout_20)         | 1     |
+isout_20__and0001(isout_20__and00011:O)| NONE(isout_20)         | 1     |
+isout_21__and0000(isout_21__and00001:O)| NONE(isout_21)         | 1     |
+isout_21__and0001(isout_21__and00011:O)| NONE(isout_21)         | 1     |
+isout_22__and0000(isout_22__and00001:O)| NONE(isout_22)         | 1     |
+isout_22__and0001(isout_22__and00011:O)| NONE(isout_22)         | 1     |
+isout_23__and0000(isout_23__and00001:O)| NONE(isout_23)         | 1     |
+isout_23__and0001(isout_23__and00011:O)| NONE(isout_23)         | 1     |
+isout_24__and0000(isout_24__and00001:O)| NONE(isout_24)         | 1     |
+isout_24__and0001(isout_24__and00011:O)| NONE(isout_24)         | 1     |
+isout_25__and0000(isout_25__and00001:O)| NONE(isout_25)         | 1     |
+isout_25__and0001(isout_25__and00011:O)| NONE(isout_25)         | 1     |
+isout_26__and0000(isout_26__and00001:O)| NONE(isout_26)         | 1     |
+isout_26__and0001(isout_26__and00011:O)| NONE(isout_26)         | 1     |
+isout_27__and0000(isout_27__and00001:O)| NONE(isout_27)         | 1     |
+isout_27__and0001(isout_27__and00011:O)| NONE(isout_27)         | 1     |
+isout_28__and0000(isout_28__and00001:O)| NONE(isout_28)         | 1     |
+isout_28__and0001(isout_28__and00011:O)| NONE(isout_28)         | 1     |
+isout_29__and0000(isout_29__and00001:O)| NONE(isout_29)         | 1     |
+isout_29__and0001(isout_29__and00011:O)| NONE(isout_29)         | 1     |
+isout_2__and0000(isout_2__and00001:O)  | NONE(isout_2)          | 1     |
+isout_2__and0001(isout_2__and00011:O)  | NONE(isout_2)          | 1     |
+isout_30__and0000(isout_30__and00001:O)| NONE(isout_30)         | 1     |
+isout_30__and0001(isout_30__and00011:O)| NONE(isout_30)         | 1     |
+isout_31__and0000(isout_31__and00001:O)| NONE(isout_31)         | 1     |
+isout_31__and0001(isout_31__and00011:O)| NONE(isout_31)         | 1     |
+isout_3__and0000(isout_3__and00001:O)  | NONE(isout_3)          | 1     |
+isout_3__and0001(isout_3__and00011:O)  | NONE(isout_3)          | 1     |
+isout_4__and0000(isout_4__and00001:O)  | NONE(isout_4)          | 1     |
+isout_4__and0001(isout_4__and00011:O)  | NONE(isout_4)          | 1     |
+isout_5__and0000(isout_5__and00001:O)  | NONE(isout_5)          | 1     |
+isout_5__and0001(isout_5__and00011:O)  | NONE(isout_5)          | 1     |
+isout_6__and0000(isout_6__and00001:O)  | NONE(isout_6)          | 1     |
+isout_6__and0001(isout_6__and00011:O)  | NONE(isout_6)          | 1     |
+isout_7__and0000(isout_7__and00001:O)  | NONE(isout_7)          | 1     |
+isout_7__and0001(isout_7__and00011:O)  | NONE(isout_7)          | 1     |
+isout_8__and0000(isout_8__and00001:O)  | NONE(isout_8)          | 1     |
+isout_8__and0001(isout_8__and00011:O)  | NONE(isout_8)          | 1     |
+isout_9__and0000(isout_9__and00001:O)  | NONE(isout_9)          | 1     |
+isout_9__and0001(isout_9__and00011:O)  | NONE(isout_9)          | 1     |
+---------------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 13.749ns (Maximum Frequency: 72.732MHz)
+   Minimum input arrival time before clock: 19.974ns
+   Maximum output required time after clock: 7.078ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'flag_not00051'
+  Clock period: 13.749ns (frequency: 72.732MHz)
+  Total number of paths / destination ports: 74915 / 64
+-------------------------------------------------------------------------
+Delay:               13.749ns (Levels of Logic = 15)
+  Source:            isout_24 (LATCH)
+  Destination:       flag_2 (LATCH)
+  Source Clock:      flag_not00051 falling
+  Destination Clock: flag_not00051 falling
+
+  Data Path: isout_24 to flag_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDCPE:G->Q            7   0.633   1.405  isout_24 (isout_24)
+     LUT4:I0->O            1   0.551   0.000  old_flag_7_cmp_eq00012_wg_lut<0> (old_flag_7_cmp_eq00012_wg_lut<0>)
+     MUXCY:S->O            1   0.500   0.000  old_flag_7_cmp_eq00012_wg_cy<0> (old_flag_7_cmp_eq00012_wg_cy<0>)
+     MUXCY:CI->O           1   0.064   0.000  old_flag_7_cmp_eq00012_wg_cy<1> (old_flag_7_cmp_eq00012_wg_cy<1>)
+     MUXCY:CI->O           1   0.064   0.000  old_flag_7_cmp_eq00012_wg_cy<2> (old_flag_7_cmp_eq00012_wg_cy<2>)
+     MUXCY:CI->O           1   0.064   0.000  old_flag_7_cmp_eq00012_wg_cy<3> (old_flag_7_cmp_eq00012_wg_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  old_flag_7_cmp_eq00012_wg_cy<4> (old_flag_7_cmp_eq00012_wg_cy<4>)
+     MUXCY:CI->O           1   0.064   0.000  old_flag_7_cmp_eq00012_wg_cy<5> (old_flag_7_cmp_eq00012_wg_cy<5>)
+     MUXCY:CI->O           1   0.064   0.000  old_flag_7_cmp_eq00012_wg_cy<6> (old_flag_7_cmp_eq00012_wg_cy<6>)
+     MUXCY:CI->O          39   0.303   1.961  old_flag_7_cmp_eq00012_wg_cy<7> (old_flag_3_cmp_eq0002)
+     LUT3:I2->O            3   0.551   1.102  old_isout_4_and00002 (old_isout_4_and0000)
+     LUT4:I1->O            2   0.551   0.903  old_flag_7_and000031 (N201)
+     LUT4_D:I3->LO         1   0.551   0.168  _old_flag_7<10>11_SW0 (N314)
+     LUT3:I2->O            5   0.551   0.947  _old_flag_7<10>11 (N29)
+     LUT4_D:I3->O         15   0.551   1.383  Mmux_flag_mux00001011_1 (Mmux_flag_mux00001011)
+     LUT2:I1->O            1   0.551   0.000  Mmux_flag_mux000041 (flag_mux0000<10>)
+     LDCPE:D                   0.203          flag_10
+    ----------------------------------------
+    Total                     13.749ns (5.880ns logic, 7.869ns route)
+                                       (42.8% logic, 57.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'B<3>'
+  Total number of paths / destination ports: 5020 / 2
+-------------------------------------------------------------------------
+Offset:              19.974ns (Levels of Logic = 17)
+  Source:            B<3> (PAD)
+  Destination:       O (LATCH)
+  Destination Clock: B<3> falling
+
+  Data Path: B<3> to O
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            85   0.821   2.352  B_3_IBUF (B_3_IBUF1)
+     LUT4:I1->O           13   0.551   1.509  Madd__add0001_xor<3>11 (_add0001<3>)
+     LUT4:I0->O            4   0.551   1.256  old_flag_7_cmp_eq0001_SW1 (N48)
+     LUT4:I0->O            1   0.551   0.996  old_flag_7_and00002_wg_lut<10>_SW0 (N173)
+     LUT3:I1->O            5   0.551   0.989  old_flag_7_cmp_eq000021_SW12_SW0 (N177)
+     LUT4:I2->O            1   0.551   0.000  old_flag_7_and00002_wg_lut<10> (old_flag_7_and00002_wg_lut<10>)
+     MUXCY:S->O            1   0.500   0.000  old_flag_7_and00002_wg_cy<10> (old_flag_7_and00002_wg_cy<10>)
+     MUXCY:CI->O           1   0.064   0.000  old_flag_7_and00002_wg_cy<11> (old_flag_7_and00002_wg_cy<11>)
+     MUXCY:CI->O           1   0.064   0.000  old_flag_7_and00002_wg_cy<12> (old_flag_7_and00002_wg_cy<12>)
+     MUXCY:CI->O           1   0.064   0.000  old_flag_7_and00002_wg_cy<13> (old_flag_7_and00002_wg_cy<13>)
+     MUXCY:CI->O           1   0.064   0.000  old_flag_7_and00002_wg_cy<14> (old_flag_7_and00002_wg_cy<14>)
+     MUXCY:CI->O           7   0.303   1.134  old_flag_7_and00002_wg_cy<15> (old_flag_7_and00002_wg_cy<15>)
+     LUT4_D:I2->O          1   0.551   0.996  old_flag_7_and0000 (old_flag_7_and0000)
+     LUT4:I1->O            1   0.551   1.140  O_mux00003911 (O_mux00003911)
+     LUT4:I0->O            1   0.551   1.140  O_mux0000433 (O_mux0000433)
+     LUT4:I0->O            1   0.551   0.869  O_mux0000470_SW0 (N278)
+     LUT4:I2->O            2   0.551   0.000  O_mux0000470 (O_mux0000)
+     LDCPE:D                   0.203          O
+    ----------------------------------------
+    Total                     19.974ns (7.593ns logic, 12.381ns route)
+                                       (38.0% logic, 62.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'flag_not00051'
+  Total number of paths / destination ports: 56899 / 128
+-------------------------------------------------------------------------
+Offset:              17.184ns (Levels of Logic = 15)
+  Source:            B<3> (PAD)
+  Destination:       flag_2 (LATCH)
+  Destination Clock: flag_not00051 falling
+
+  Data Path: B<3> to flag_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            85   0.821   2.352  B_3_IBUF (B_3_IBUF1)
+     LUT4:I1->O           13   0.551   1.509  Madd__add0001_xor<3>11 (_add0001<3>)
+     LUT4:I0->O            4   0.551   1.256  old_flag_7_cmp_eq0001_SW1 (N48)
+     LUT4:I0->O            1   0.551   0.996  old_flag_7_and00002_wg_lut<10>_SW0 (N173)
+     LUT3:I1->O            5   0.551   0.989  old_flag_7_cmp_eq000021_SW12_SW0 (N177)
+     LUT4:I2->O            1   0.551   0.000  old_flag_7_and00002_wg_lut<10> (old_flag_7_and00002_wg_lut<10>)
+     MUXCY:S->O            1   0.500   0.000  old_flag_7_and00002_wg_cy<10> (old_flag_7_and00002_wg_cy<10>)
+     MUXCY:CI->O           1   0.064   0.000  old_flag_7_and00002_wg_cy<11> (old_flag_7_and00002_wg_cy<11>)
+     MUXCY:CI->O           1   0.064   0.000  old_flag_7_and00002_wg_cy<12> (old_flag_7_and00002_wg_cy<12>)
+     MUXCY:CI->O           1   0.064   0.000  old_flag_7_and00002_wg_cy<13> (old_flag_7_and00002_wg_cy<13>)
+     MUXCY:CI->O           1   0.064   0.000  old_flag_7_and00002_wg_cy<14> (old_flag_7_and00002_wg_cy<14>)
+     MUXCY:CI->O           7   0.303   1.261  old_flag_7_and00002_wg_cy<15> (old_flag_7_and00002_wg_cy<15>)
+     LUT3:I1->O            5   0.551   0.947  _old_flag_7<10>11 (N29)
+     LUT4_D:I3->O         15   0.551   1.383  Mmux_flag_mux00001011_1 (Mmux_flag_mux00001011)
+     LUT2:I1->O            1   0.551   0.000  Mmux_flag_mux000041 (flag_mux0000<10>)
+     LDCPE:D                   0.203          flag_10
+    ----------------------------------------
+    Total                     17.184ns (6.491ns logic, 10.693ns route)
+                                       (37.8% logic, 62.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'B<3>'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              7.078ns (Levels of Logic = 1)
+  Source:            O (LATCH)
+  Destination:       O (PAD)
+  Source Clock:      B<3> falling
+
+  Data Path: O to O
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDCPE:G->Q            1   0.633   0.801  O (O_OBUF)
+     OBUF:I->O                 5.644          O_OBUF (O)
+    ----------------------------------------
+    Total                      7.078ns (6.277ns logic, 0.801ns route)
+                                       (88.7% logic, 11.3% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 11.00 secs
+Total CPU time to Xst completion: 11.25 secs
+ 
+--> 
+
+Total memory usage is 323624 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   10 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

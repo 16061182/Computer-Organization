@@ -1,0 +1,5 @@
+set -tmpdir "E:/ISEproject/P5CPU1/xst/projnav.tmp"
+set -xsthdpdir "E:/ISEproject/P5CPU1/xst"
+elaborate
+-ifn DtoE.prj
+-ifmt mixed

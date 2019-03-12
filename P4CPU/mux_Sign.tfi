@@ -1,0 +1,14 @@
+
+
+
+// Instantiate the module
+mux_Sign instance_name (
+    .In0(In0), 
+    .In1(In1), 
+    .In2(In2), 
+    .In3(In3), 
+    .Select(Select), 
+    .Out(Out)
+    );
+
+

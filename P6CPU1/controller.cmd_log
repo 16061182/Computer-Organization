@@ -1,0 +1,4 @@
+vhdtdtfi -lang verilog -prj P6CPU1 -o E:/ISEproject/P6CPU1/controller.tfi -lib work E:/ISEproject/P6CPU1//controller.v -module controller -template D:/ISE/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 
+vhdtdtfi -lang verilog -prj P6CPU1 -o E:/ISEproject/P6CPU1/controller.tfi -lib work E:/ISEproject/P6CPU1//controller.v -module controller -template D:/ISE/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 
+vhdtdtfi -lang verilog -prj P6CPU1 -o E:/ISEproject/P6CPU1/controller.tfi -lib work E:/ISEproject/P6CPU1//controller.v -module controller -template D:/ISE/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 
+vhdtdtfi -lang verilog -prj P6CPU1 -o E:/ISEproject/P6CPU1/controller.tfi -lib work E:/ISEproject/P6CPU1//controller.v -module controller -template D:/ISE/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 

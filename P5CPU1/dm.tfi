@@ -1,0 +1,15 @@
+
+
+
+// Instantiate the module
+dm instance_name (
+    .clk(clk), 
+    .reset(reset), 
+    .pc4_m(pc4_m), 
+    .ir_m(ir_m), 
+    .aluout_m(aluout_m), 
+    .rt_m(rt_m), 
+    .dmout(dmout)
+    );
+
+

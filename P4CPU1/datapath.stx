@@ -1,0 +1,57 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to E:/ISEproject/P4CPU1/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.16 secs
+ 
+--> Parameter xsthdpdir set to E:/ISEproject/P4CPU1/xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.16 secs
+ 
+--> WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+WARNING:HDLCompilers:176 - Include directory \Users\thinkpad\Desktop\P4提交压缩包\ does not exist
+Compiling verilog file "C:/Users/thinkpad/Desktop/P4提交压缩包/pccal.v" in library work
+Compiling verilog file "C:/Users/thinkpad/Desktop/P4提交压缩包/pc.v" in library work
+Module <pccal> compiled
+Compiling verilog file "C:/Users/thinkpad/Desktop/P4提交压缩包/mux.v" in library work
+Module <pc> compiled
+Module <mux_Regdst> compiled
+Module <mux_MemtoReg> compiled
+Module <mux_ALUSrc> compiled
+Compiling verilog file "C:/Users/thinkpad/Desktop/P4提交压缩包/im.v" in library work
+Module <mux_Sign> compiled
+Compiling verilog file "C:/Users/thinkpad/Desktop/P4提交压缩包/grf.v" in library work
+Module <im> compiled
+Compiling verilog file "C:/Users/thinkpad/Desktop/P4提交压缩包/ext.v" in library work
+Module <grf> compiled
+Compiling verilog file "C:/Users/thinkpad/Desktop/P4提交压缩包/dm.v" in library work
+Module <ext> compiled
+Compiling verilog file "C:/Users/thinkpad/Desktop/P4提交压缩包/alu.v" in library work
+Module <dm> compiled
+Compiling verilog file "C:/Users/thinkpad/Desktop/P4提交压缩包/datapath.v" in library work
+Module <alu> compiled
+Module <datapath> compiled
+No errors in compilation
+Analysis of file <"datapath.prj"> succeeded.
+ 
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.22 secs
+ 
+--> 
+
+Total memory usage is 261412 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    2 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

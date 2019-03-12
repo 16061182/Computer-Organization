@@ -1,0 +1,11 @@
+
+
+
+// Instantiate the module
+cmp instance_name (
+    .rsd_out(rsd_out), 
+    .rtd_out(rtd_out), 
+    .isbeq(isbeq)
+    );
+
+

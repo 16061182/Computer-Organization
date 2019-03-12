@@ -1,0 +1,1 @@
+vhdtdtfi -lang verilog -prj P4CPU -o E:/ISEproject/P4CPU/mux_ALUSrc.tfi -lib work E:/ISEproject/P4CPU//mux.v -module mux_ALUSrc -template D:/ISE/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 

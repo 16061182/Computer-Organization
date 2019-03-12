@@ -1,0 +1,12 @@
+
+
+
+// Instantiate the module
+stall instance_name (
+    .ir_d(ir_d), 
+    .ir_e(ir_e), 
+    .ir_m(ir_m), 
+    .stall(stall)
+    );
+
+

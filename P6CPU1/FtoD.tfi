@@ -1,0 +1,16 @@
+
+
+
+// Instantiate the module
+FtoD instance_name (
+    .clk(clk), 
+    .reset(reset), 
+    .stall(stall), 
+    .ir(ir), 
+    .pc4(pc4), 
+    .ir_d(ir_d), 
+    .pc4_d(pc4_d), 
+    .pc8_d(pc8_d)
+    );
+
+

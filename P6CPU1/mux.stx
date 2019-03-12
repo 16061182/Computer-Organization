@@ -1,0 +1,63 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to E:/ISEproject/P6CPU1/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.21 secs
+ 
+--> Parameter xsthdpdir set to E:/ISEproject/P6CPU1/xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.21 secs
+ 
+--> WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "stall.v" in library work
+Compiling verilog file "coder.v" in library work
+Module <stall> compiled
+Compiling verilog file "bypass.v" in library work
+Module <coder> compiled
+Compiling verilog file "hazard.v" in library work
+Module <bypass> compiled
+Compiling verilog file "cmp.v" in library work
+Module <hazard> compiled
+Compiling verilog file "npc.v" in library work
+Module <cmp> compiled
+ERROR:HDLCompilers:28 - "npc.v" line 31 'ir_d' has not been declared
+ERROR:HDLCompilers:28 - "npc.v" line 32 'ir_d' has not been declared
+ERROR:HDLCompilers:28 - "npc.v" line 32 'ir_d' has not been declared
+Compiling verilog file "DtoE.v" in library work
+Module <npc> compiled
+Compiling verilog file "alu.v" in library work
+Module <DtoE> compiled
+Compiling verilog file "EtoM.v" in library work
+Module <alu> compiled
+Compiling verilog file "dm.v" in library work
+Module <EtoM> compiled
+Compiling verilog file "MtoW.v" in library work
+Module <dm> compiled
+ERROR:HDLCompilers:26 - "MtoW.v" line 34 unexpected token: ')'
+ERROR:HDLCompilers:26 - "MtoW.v" line 34 expecting ')', found ';'
+ERROR:HDLCompilers:28 - "MtoW.v" line 42 'IR_W' has not been declared
+ERROR:HDLCompilers:28 - "MtoW.v" line 50 'IR_W' has not been declared
+ERROR:HDLCompilers:28 - "MtoW.v" line 57 'IR_W' has not been declared
+Compiling verilog file "mux.v" in library work
+Module <MtoW> compiled
+Module <mux_pc> compiled
+Module <mux_alub> compiled
+Module <mux_rfwd> compiled
+Module <mux_bypass> compiled
+Analysis of file <"mux.prj"> failed.
+--> 
+
+Total memory usage is 261364 kilobytes
+
+Number of errors   :    8 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

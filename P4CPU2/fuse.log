@@ -1,0 +1,47 @@
+Running: D:\ISE\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o E:/ISEproject/P4CPU2/P4CPU2test_isim_beh.exe -prj E:/ISEproject/P4CPU2/P4CPU2test_beh.prj work.P4CPU2test work.glbl 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Analyzing Verilog file "E:/ISEproject/P4CPU2/pccal.v" into library work
+Analyzing Verilog file "E:/ISEproject/P4CPU2/pc.v" into library work
+Analyzing Verilog file "E:/ISEproject/P4CPU2/mux.v" into library work
+Analyzing Verilog file "E:/ISEproject/P4CPU2/im.v" into library work
+Analyzing Verilog file "E:/ISEproject/P4CPU2/grf.v" into library work
+Analyzing Verilog file "E:/ISEproject/P4CPU2/ext.v" into library work
+Analyzing Verilog file "E:/ISEproject/P4CPU2/dm.v" into library work
+Analyzing Verilog file "E:/ISEproject/P4CPU2/alu.v" into library work
+Analyzing Verilog file "E:/ISEproject/P4CPU2/datapath.v" into library work
+Analyzing Verilog file "E:/ISEproject/P4CPU2/controller.v" into library work
+Analyzing Verilog file "E:/ISEproject/P4CPU2/mips.v" into library work
+Analyzing Verilog file "E:/ISEproject/P4CPU2/P4CPU2test.v" into library work
+Analyzing Verilog file "D:/ISE/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+WARNING:HDLCompiler:1016 - "E:/ISEproject/P4CPU2/mips.v" Line 60: Port Branch3 is not connected to this instance
+WARNING:HDLCompiler:1016 - "E:/ISEproject/P4CPU2/datapath.v" Line 87: Port In3 is not connected to this instance
+WARNING:HDLCompiler:1016 - "E:/ISEproject/P4CPU2/datapath.v" Line 114: Port In3 is not connected to this instance
+WARNING:HDLCompiler:1016 - "E:/ISEproject/P4CPU2/datapath.v" Line 150: Port In3 is not connected to this instance
+Completed static elaboration
+Compiling module pc
+Compiling module im
+Compiling module pccal
+Compiling module mux_Regdst
+Compiling module grf
+Compiling module ext
+Compiling module mux_Sign
+Compiling module mux_ALUSrc
+Compiling module alu
+Compiling module dm
+Compiling module mux_MemtoReg
+Compiling module datapath
+Compiling module controller
+Compiling module mips
+Compiling module P4CPU2test
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 9 sub-compilation(s) to finish...
+WARNING:Simulator - Unable to copy libPortabilityNOSH.dll to the simulation executable directory: boost::filesystem::copy_file: 系统找不到指定的路径。, "isim\P4CPU2test_isim_beh.exe.sim\libPortability.dll".
+Compiled 16 Verilog Units
+Built simulation executable E:/ISEproject/P4CPU2/P4CPU2test_isim_beh.exe
+Fuse Memory Usage: 29064 KB
+Fuse CPU Usage: 749 ms

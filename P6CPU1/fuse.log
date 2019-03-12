@@ -1,0 +1,70 @@
+Running: D:\ISE\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o E:/ISEproject/P6CPU1/test1_isim_beh.exe -prj E:/ISEproject/P6CPU1/test1_beh.prj work.test1 work.glbl 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Analyzing Verilog file "E:/ISEproject/P6CPU1/stall.v" into library work
+Analyzing Verilog file "E:/ISEproject/P6CPU1/rf.v" into library work
+Analyzing Verilog file "E:/ISEproject/P6CPU1/pc.v" into library work
+Analyzing Verilog file "E:/ISEproject/P6CPU1/npc.v" into library work
+Analyzing Verilog file "E:/ISEproject/P6CPU1/mux.v" into library work
+Analyzing Verilog file "E:/ISEproject/P6CPU1/MtoW.v" into library work
+Analyzing Verilog file "E:/ISEproject/P6CPU1/im.v" into library work
+Analyzing Verilog file "E:/ISEproject/P6CPU1/ifu.v" into library work
+Analyzing Verilog file "E:/ISEproject/P6CPU1/FtoD.v" into library work
+Analyzing Verilog file "E:/ISEproject/P6CPU1/EtoM.v" into library work
+Analyzing Verilog file "E:/ISEproject/P6CPU1/DtoE.v" into library work
+Analyzing Verilog file "E:/ISEproject/P6CPU1/dm.v" into library work
+Analyzing Verilog file "E:/ISEproject/P6CPU1/controller.v" into library work
+Analyzing Verilog file "E:/ISEproject/P6CPU1/coder.v" into library work
+Analyzing Verilog file "E:/ISEproject/P6CPU1/cmp.v" into library work
+Analyzing Verilog file "E:/ISEproject/P6CPU1/bypass.v" into library work
+Analyzing Verilog file "E:/ISEproject/P6CPU1/alu.v" into library work
+Analyzing Verilog file "E:/ISEproject/P6CPU1/hazard.v" into library work
+Analyzing Verilog file "E:/ISEproject/P6CPU1/datapath.v" into library work
+Analyzing Verilog file "E:/ISEproject/P6CPU1/mips.v" into library work
+Analyzing Verilog file "E:/ISEproject/P6CPU1/test1.v" into library work
+Analyzing Verilog file "D:/ISE/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+WARNING:HDLCompiler:1016 - "E:/ISEproject/P6CPU1/datapath.v" Line 121: Port memtoreg is not connected to this instance
+WARNING:HDLCompiler:1016 - "E:/ISEproject/P6CPU1/datapath.v" Line 128: Port in5 is not connected to this instance
+WARNING:HDLCompiler:1016 - "E:/ISEproject/P6CPU1/datapath.v" Line 141: Port in5 is not connected to this instance
+WARNING:HDLCompiler:1016 - "E:/ISEproject/P6CPU1/datapath.v" Line 198: Port isbeq is not connected to this instance
+WARNING:HDLCompiler:1016 - "E:/ISEproject/P6CPU1/datapath.v" Line 204: Port in4 is not connected to this instance
+WARNING:HDLCompiler:1016 - "E:/ISEproject/P6CPU1/datapath.v" Line 217: Port in4 is not connected to this instance
+WARNING:HDLCompiler:1016 - "E:/ISEproject/P6CPU1/datapath.v" Line 260: Port isbeq is not connected to this instance
+WARNING:HDLCompiler:1016 - "E:/ISEproject/P6CPU1/datapath.v" Line 265: Port in2 is not connected to this instance
+WARNING:HDLCompiler:1016 - "E:/ISEproject/P6CPU1/datapath.v" Line 303: Port isbeq is not connected to this instance
+Completed static elaboration
+Compiling module mux_pc
+Compiling module pc
+Compiling module ifu
+Compiling module im
+Compiling module FtoD
+Compiling module controller
+Compiling module mux_bypass
+Compiling module npc
+Compiling module rf
+Compiling module cmp
+Compiling module DtoE
+Compiling module alu
+Compiling module mux_alub
+Compiling module EtoM
+Compiling module dm
+Compiling module MtoW
+Compiling module mux_rfwd
+Compiling module datapath
+Compiling module coder
+Compiling module stall
+Compiling module bypass
+Compiling module hazard
+Compiling module mips
+Compiling module test1
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 18 sub-compilation(s) to finish...
+WARNING:Simulator - Unable to copy libPortabilityNOSH.dll to the simulation executable directory: boost::filesystem::copy_file: 系统找不到指定的路径。, "isim\test1_isim_beh.exe.sim\libPortability.dll".
+Compiled 25 Verilog Units
+Built simulation executable E:/ISEproject/P6CPU1/test1_isim_beh.exe
+Fuse Memory Usage: 29768 KB
+Fuse CPU Usage: 921 ms

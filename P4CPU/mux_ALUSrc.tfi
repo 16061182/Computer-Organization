@@ -1,0 +1,12 @@
+
+
+
+// Instantiate the module
+mux_ALUSrc instance_name (
+    .In0(In0), 
+    .In1(In1), 
+    .Select(Select), 
+    .Out(Out)
+    );
+
+

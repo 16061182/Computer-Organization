@@ -1,0 +1,20 @@
+
+
+
+// Instantiate the module
+controller instance_name (
+    .Option(Option), 
+    .Function(Function), 
+    .Regdst(Regdst), 
+    .Branch0(Branch0), 
+    .Branch1(Branch1), 
+    .MemRead(MemRead), 
+    .MemtoReg(MemtoReg), 
+    .ALUOp(ALUOp), 
+    .MemWrite(MemWrite), 
+    .ALUSrc(ALUSrc), 
+    .Regwrite(Regwrite), 
+    .Sign(Sign)
+    );
+
+

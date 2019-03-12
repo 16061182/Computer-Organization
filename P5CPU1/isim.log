@@ -1,0 +1,47 @@
+ISim log file
+Running: E:\ISEproject\P5CPU1\test1_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb E:/ISEproject/P5CPU1/test1_isim_beh.wdb 
+ISim P.20131013 (signature 0x7708f090)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+                  55@00003000: $ 4 <= 0000007b
+                  65@00003004: $ 5 <= 000001fb
+                  75@00003008: $ 6 <= 00e90000
+                  85@0000300c: $16 <= 00e90000
+                  95@00003010: $17 <= 00e8ff85
+                 105@00003014: $ 8 <= 00000000
+                 115@00003018: $31 <= 00003020
+                 125@0000301c: $10 <= 00000064
+                 125@00003030:*00000000<=0000007b
+                 135@00003034:*00000004<=000001fb
+                 145@00003038:*00000008<=00e90000
+                 155@0000303c:*0000000c<=00e90000
+                 165@00003040:*00000010<=00e8ff85
+                 185@00003044: $ 4 <= 0000007b
+                 195@00003048: $ 5 <= 00e90000
+                 195@0000304c:*0000001c<=0000007b
+                 205@00003050:*00000020<=000001fb
+                 225@00003054: $ 4 <= 00000001
+                 235@00003058: $ 5 <= 00000002
+                 245@0000305c: $ 6 <= 00000001
+                 265@00003068:*00000004<=00000002
+                 305@00003020: $31 <= 00003028
+# restart
+# run 10ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# run 10ns
+# run 10ns
+# run 10ns
+# run 10ns
+# run 10ns
+                  55@00003000: $ 4 <= 0000007b

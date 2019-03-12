@@ -1,0 +1,12 @@
+
+
+
+// Instantiate the module
+mux_aluout instance_name (
+    .aluout(aluout), 
+    .xaluout(xaluout), 
+    .xaluop(xaluop), 
+    .out(out)
+    );
+
+

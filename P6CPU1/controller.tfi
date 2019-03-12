@@ -1,0 +1,17 @@
+
+
+
+// Instantiate the module
+controller instance_name (
+    .ir(ir), 
+    .isbeq(isbeq), 
+    .pc_sel(pc_sel), 
+    .jump(jump), 
+    .memtoreg(memtoreg), 
+    .aluop(aluop), 
+    .memwrite(memwrite), 
+    .alusrc(alusrc), 
+    .regwrite(regwrite)
+    );
+
+

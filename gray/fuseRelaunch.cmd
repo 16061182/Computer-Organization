@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "E:/ISEproject/gray/graytest_isim_beh.exe" -prj "E:/ISEproject/gray/graytest_beh.prj" "work.graytest" "work.glbl" 

@@ -1,0 +1,13 @@
+
+
+
+// Instantiate the module
+pc instance_name (
+    .clk(clk), 
+    .reset(reset), 
+    .stall(stall), 
+    .in(in), 
+    .out(out)
+    );
+
+

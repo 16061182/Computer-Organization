@@ -1,0 +1,7 @@
+vhdtdtfi -lang verilog -prj P6CPU1 -o E:/ISEproject/P6CPU1/coder.tfi -lib work E:/ISEproject/P6CPU1//coder.v -module coder -template D:/ISE/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 
+vhdtdtfi -lang verilog -prj P6CPU1 -o E:/ISEproject/P6CPU1/coder.tfi -lib work E:/ISEproject/P6CPU1//coder.v -module coder -template D:/ISE/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 
+vhdtdtfi -lang verilog -prj P6CPU1 -o E:/ISEproject/P6CPU1/coder.tfi -lib work E:/ISEproject/P6CPU1//coder.v -module coder -template D:/ISE/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 
+vhdtdtfi -lang verilog -prj P6CPU1 -o E:/ISEproject/P6CPU1/coder.tfi -lib work E:/ISEproject/P6CPU1//coder.v -module coder -template D:/ISE/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 
+vhdtdtfi -lib work E:/ISEproject/P6CPU1/coder.v -lang verilog -prj P6CPU1 -o coder.spl -module coder -template D:/ISE/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family aspartan3 coder.spl E:/ISEproject/P6CPU1/coder.sym 
+vhdtdtfi -lang verilog -prj P6CPU1 -o E:/ISEproject/P6CPU1/coder.tfi -lib work E:/ISEproject/P6CPU1//coder.v -module coder -template D:/ISE/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 

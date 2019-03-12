@@ -1,0 +1,20 @@
+
+
+
+// Instantiate the module
+EtoM instance_name (
+    .clk(clk), 
+    .reset(reset), 
+    .ir(ir), 
+    .aluout(aluout), 
+    .rt(rt), 
+    .pc4(pc4), 
+    .pc8(pc8), 
+    .ir_m(ir_m), 
+    .aluout_m(aluout_m), 
+    .rt_m(rt_m), 
+    .pc4_m(pc4_m), 
+    .pc8_m(pc8_m)
+    );
+
+

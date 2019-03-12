@@ -1,0 +1,11 @@
+
+
+
+// Instantiate the module
+be instance_name (
+    .aluout_m(aluout_m), 
+    .be_option(be_option), 
+    .be(be)
+    );
+
+

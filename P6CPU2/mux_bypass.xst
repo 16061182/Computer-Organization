@@ -1,0 +1,5 @@
+set -tmpdir "E:/ISEproject/P6CPU2/xst/projnav.tmp"
+set -xsthdpdir "E:/ISEproject/P6CPU2/xst"
+elaborate
+-ifn mux_bypass.prj
+-ifmt mixed

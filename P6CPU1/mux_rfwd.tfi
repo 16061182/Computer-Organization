@@ -1,0 +1,13 @@
+
+
+
+// Instantiate the module
+mux_rfwd instance_name (
+    .in0(in0), 
+    .in1(in1), 
+    .in2(in2), 
+    .memtoreg(memtoreg), 
+    .wdata(wdata)
+    );
+
+

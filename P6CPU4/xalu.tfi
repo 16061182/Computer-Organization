@@ -1,0 +1,16 @@
+
+
+
+// Instantiate the module
+xalu instance_name (
+    .clk(clk), 
+    .reset(reset), 
+    .numa(numa), 
+    .numb(numb), 
+    .xaluop_d(xaluop_d), 
+    .xaluop_e(xaluop_e), 
+    .xstall(xstall), 
+    .xaluout(xaluout)
+    );
+
+

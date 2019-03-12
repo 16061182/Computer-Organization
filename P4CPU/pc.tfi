@@ -1,0 +1,12 @@
+
+
+
+// Instantiate the module
+pc instance_name (
+    .pc_clk(pc_clk), 
+    .pc_reset(pc_reset), 
+    .pc_In(pc_In), 
+    .pc_Out(pc_Out)
+    );
+
+

@@ -1,0 +1,18 @@
+
+
+
+// Instantiate the module
+hazard instance_name (
+    .clk(clk), 
+    .reset(reset), 
+    .ir(ir), 
+    .a3_w(a3_w), 
+    .stall(stall), 
+    .rsd_sel(rsd_sel), 
+    .rtd_sel(rtd_sel), 
+    .rse_sel(rse_sel), 
+    .rte_sel(rte_sel), 
+    .rtm_sel(rtm_sel)
+    );
+
+

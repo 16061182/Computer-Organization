@@ -1,0 +1,22 @@
+
+
+
+// Instantiate the module
+datapath instance_name (
+    .clk(clk), 
+    .reset(reset), 
+    .Regdst(Regdst), 
+    .Branch0(Branch0), 
+    .Branch1(Branch1), 
+    .MemRead(MemRead), 
+    .MemtoReg(MemtoReg), 
+    .ALUOp(ALUOp), 
+    .MemWrite(MemWrite), 
+    .ALUSrc(ALUSrc), 
+    .Regwrite(Regwrite), 
+    .Sign(Sign), 
+    .Option(Option), 
+    .Function(Function)
+    );
+
+

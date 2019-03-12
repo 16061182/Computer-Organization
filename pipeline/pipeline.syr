@@ -1,0 +1,484 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.19 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.19 secs
+ 
+--> Reading design: pipeline.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "pipeline.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "pipeline"
+Output Format                      : NGC
+Target Device                      : xa3s50-4-vqg100
+
+---- Source Options
+Top Module Name                    : pipeline
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "pipeline.v" in library work
+Module <pipeline> compiled
+No errors in compilation
+Analysis of file <"pipeline.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <pipeline> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <pipeline>.
+Module <pipeline> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <pipeline>.
+    Related source file is "pipeline.v".
+WARNING:Xst:643 - "pipeline.v" line 38: The result of a 32x32-bit multiplication is partially used. Only the 32 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+WARNING:Xst:643 - "pipeline.v" line 39: The result of a 32x32-bit multiplication is partially used. Only the 32 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+    Found 32-bit register for signal <C>.
+    Found 32-bit adder for signal <C$add0000> created at line 41.
+    Found 64-bit register for signal <step>.
+    Found 32x32-bit multiplier for signal <step_0$mult0001> created at line 38.
+    Found 32x32-bit multiplier for signal <step_1$mult0001> created at line 39.
+    Summary:
+	inferred  96 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   2 Multiplier(s).
+Unit <pipeline> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 2
+ 32x32-bit multiplier                                  : 2
+# Adders/Subtractors                                   : 1
+ 32-bit adder                                          : 1
+# Registers                                            : 3
+ 32-bit register                                       : 3
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <pipeline>.
+	Found pipelined multiplier on signal <step_1_mult0001>:
+		- 1 pipeline level(s) found in a register connected to the multiplier macro output.
+		Pushing register(s) into the multiplier macro.
+	Found pipelined multiplier on signal <step_0_mult0001>:
+		- 1 pipeline level(s) found in a register connected to the multiplier macro output.
+		Pushing register(s) into the multiplier macro.
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult_step_1_mult0001 by adding 2 register level(s).
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult_step_0_mult0001 by adding 2 register level(s).
+Unit <pipeline> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 2
+ 32x32-bit registered multiplier                       : 2
+# Adders/Subtractors                                   : 1
+ 32-bit adder                                          : 1
+# Registers                                            : 32
+ Flip-Flops                                            : 32
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:2677 - Node <Mmult_step_1_mult0001_31> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <Mmult_step_1_mult0001_30> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <Mmult_step_1_mult0001_29> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <Mmult_step_1_mult0001_28> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <Mmult_step_1_mult0001_27> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <Mmult_step_1_mult0001_26> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <Mmult_step_1_mult0001_25> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <Mmult_step_1_mult0001_24> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <Mmult_step_1_mult0001_23> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <Mmult_step_1_mult0001_22> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <Mmult_step_1_mult0001_21> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <Mmult_step_1_mult0001_20> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <Mmult_step_1_mult0001_19> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <Mmult_step_1_mult0001_18> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <Mmult_step_1_mult0001_17> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <Mmult_step_1_mult0001_16> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <Mmult_step_1_mult0001_15> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <Mmult_step_1_mult0001_14> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <Mmult_step_1_mult0001_13> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <Mmult_step_1_mult0001_12> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <Mmult_step_1_mult0001_11> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <Mmult_step_1_mult0001_10> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <Mmult_step_1_mult0001_9> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <Mmult_step_1_mult0001_8> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <Mmult_step_1_mult0001_7> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <Mmult_step_1_mult0001_6> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <Mmult_step_1_mult0001_5> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <Mmult_step_1_mult0001_4> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <Mmult_step_1_mult0001_3> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <Mmult_step_1_mult0001_2> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <Mmult_step_1_mult0001_1> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <Mmult_step_1_mult0001_0> of sequential type is unconnected in block <pipeline>.
+
+Optimizing unit <pipeline> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block pipeline, actual ratio is 42.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 96
+ Flip-Flops                                            : 96
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : pipeline.ngr
+Top Level Output File Name         : pipeline
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 161
+
+Cell Usage :
+# BELS                             : 1882
+#      GND                         : 1
+#      LUT2                        : 288
+#      LUT3                        : 15
+#      LUT4                        : 256
+#      MULT_AND                    : 240
+#      MUXCY                       : 524
+#      XORCY                       : 558
+# FlipFlops/Latches                : 96
+#      FD                          : 96
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 160
+#      IBUF                        : 128
+#      OBUF                        : 32
+# MULTs                            : 3
+#      MULT18X18                   : 3
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : xa3s50vqg100-4 
+
+ Number of Slices:                      324  out of    768    42%  
+ Number of Slice Flip Flops:             96  out of   1536     6%  
+ Number of 4 input LUTs:                559  out of   1536    36%  
+ Number of IOs:                         161
+ Number of bonded IOBs:                 161  out of     63   255% (*) 
+ Number of MULT18X18s:                    3  out of      4    75%  
+ Number of GCLKs:                         1  out of      8    12%  
+
+WARNING:Xst:1336 -  (*) More than 100% of Device resources are used
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 96    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 5.938ns (Maximum Frequency: 168.407MHz)
+   Minimum input arrival time before clock: 18.440ns
+   Maximum output required time after clock: 7.165ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 5.938ns (frequency: 168.407MHz)
+  Total number of paths / destination ports: 1552 / 32
+-------------------------------------------------------------------------
+Delay:               5.938ns (Levels of Logic = 33)
+  Source:            Mmult_step_0_mult0001_31 (FF)
+  Destination:       C_31 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: Mmult_step_0_mult0001_31 to C_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.720   1.140  Mmult_step_0_mult0001_31 (Mmult_step_0_mult0001_31)
+     LUT2:I0->O            1   0.551   0.000  Madd_C_add0000_lut<0> (Madd_C_add0000_lut<0>)
+     MUXCY:S->O            1   0.500   0.000  Madd_C_add0000_cy<0> (Madd_C_add0000_cy<0>)
+     MUXCY:CI->O           1   0.064   0.000  Madd_C_add0000_cy<1> (Madd_C_add0000_cy<1>)
+     MUXCY:CI->O           1   0.064   0.000  Madd_C_add0000_cy<2> (Madd_C_add0000_cy<2>)
+     MUXCY:CI->O           1   0.064   0.000  Madd_C_add0000_cy<3> (Madd_C_add0000_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  Madd_C_add0000_cy<4> (Madd_C_add0000_cy<4>)
+     MUXCY:CI->O           1   0.064   0.000  Madd_C_add0000_cy<5> (Madd_C_add0000_cy<5>)
+     MUXCY:CI->O           1   0.064   0.000  Madd_C_add0000_cy<6> (Madd_C_add0000_cy<6>)
+     MUXCY:CI->O           1   0.064   0.000  Madd_C_add0000_cy<7> (Madd_C_add0000_cy<7>)
+     MUXCY:CI->O           1   0.064   0.000  Madd_C_add0000_cy<8> (Madd_C_add0000_cy<8>)
+     MUXCY:CI->O           1   0.064   0.000  Madd_C_add0000_cy<9> (Madd_C_add0000_cy<9>)
+     MUXCY:CI->O           1   0.064   0.000  Madd_C_add0000_cy<10> (Madd_C_add0000_cy<10>)
+     MUXCY:CI->O           1   0.064   0.000  Madd_C_add0000_cy<11> (Madd_C_add0000_cy<11>)
+     MUXCY:CI->O           1   0.064   0.000  Madd_C_add0000_cy<12> (Madd_C_add0000_cy<12>)
+     MUXCY:CI->O           1   0.064   0.000  Madd_C_add0000_cy<13> (Madd_C_add0000_cy<13>)
+     MUXCY:CI->O           1   0.064   0.000  Madd_C_add0000_cy<14> (Madd_C_add0000_cy<14>)
+     MUXCY:CI->O           1   0.064   0.000  Madd_C_add0000_cy<15> (Madd_C_add0000_cy<15>)
+     MUXCY:CI->O           1   0.064   0.000  Madd_C_add0000_cy<16> (Madd_C_add0000_cy<16>)
+     MUXCY:CI->O           1   0.064   0.000  Madd_C_add0000_cy<17> (Madd_C_add0000_cy<17>)
+     MUXCY:CI->O           1   0.064   0.000  Madd_C_add0000_cy<18> (Madd_C_add0000_cy<18>)
+     MUXCY:CI->O           1   0.064   0.000  Madd_C_add0000_cy<19> (Madd_C_add0000_cy<19>)
+     MUXCY:CI->O           1   0.064   0.000  Madd_C_add0000_cy<20> (Madd_C_add0000_cy<20>)
+     MUXCY:CI->O           1   0.064   0.000  Madd_C_add0000_cy<21> (Madd_C_add0000_cy<21>)
+     MUXCY:CI->O           1   0.064   0.000  Madd_C_add0000_cy<22> (Madd_C_add0000_cy<22>)
+     MUXCY:CI->O           1   0.064   0.000  Madd_C_add0000_cy<23> (Madd_C_add0000_cy<23>)
+     MUXCY:CI->O           1   0.064   0.000  Madd_C_add0000_cy<24> (Madd_C_add0000_cy<24>)
+     MUXCY:CI->O           1   0.064   0.000  Madd_C_add0000_cy<25> (Madd_C_add0000_cy<25>)
+     MUXCY:CI->O           1   0.064   0.000  Madd_C_add0000_cy<26> (Madd_C_add0000_cy<26>)
+     MUXCY:CI->O           1   0.064   0.000  Madd_C_add0000_cy<27> (Madd_C_add0000_cy<27>)
+     MUXCY:CI->O           1   0.064   0.000  Madd_C_add0000_cy<28> (Madd_C_add0000_cy<28>)
+     MUXCY:CI->O           1   0.064   0.000  Madd_C_add0000_cy<29> (Madd_C_add0000_cy<29>)
+     MUXCY:CI->O           0   0.064   0.000  Madd_C_add0000_cy<30> (Madd_C_add0000_cy<30>)
+     XORCY:CI->O           1   0.904   0.000  Madd_C_add0000_xor<31> (C_add0000<31>)
+     FD:D                      0.203          C_31
+    ----------------------------------------
+    Total                      5.938ns (4.798ns logic, 1.140ns route)
+                                       (80.8% logic, 19.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 42696628 / 64
+-------------------------------------------------------------------------
+Offset:              18.440ns (Levels of Logic = 37)
+  Source:            B2<4> (PAD)
+  Destination:       Mmult_step_1_mult0001_32 (FF)
+  Destination Clock: clk rising
+
+  Data Path: B2<4> to Mmult_step_1_mult0001_32
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            28   0.821   2.169  B2_4_IBUF (Mmult_step_1_mult0001_A2<23>_x_B2<4>_mand)
+     LUT4:I0->O            1   0.551   0.000  Mmult_step_1_mult0001_Madd14_lut<3> (Mmult_step_1_mult0001_Madd14_lut<3>)
+     MUXCY:S->O            1   0.500   0.000  Mmult_step_1_mult0001_Madd14_cy<3> (Mmult_step_1_mult0001_Madd14_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  Mmult_step_1_mult0001_Madd14_cy<4> (Mmult_step_1_mult0001_Madd14_cy<4>)
+     MUXCY:CI->O           1   0.064   0.000  Mmult_step_1_mult0001_Madd14_cy<5> (Mmult_step_1_mult0001_Madd14_cy<5>)
+     MUXCY:CI->O           1   0.064   0.000  Mmult_step_1_mult0001_Madd14_cy<6> (Mmult_step_1_mult0001_Madd14_cy<6>)
+     MUXCY:CI->O           1   0.064   0.000  Mmult_step_1_mult0001_Madd14_cy<7> (Mmult_step_1_mult0001_Madd14_cy<7>)
+     MUXCY:CI->O           1   0.064   0.000  Mmult_step_1_mult0001_Madd14_cy<8> (Mmult_step_1_mult0001_Madd14_cy<8>)
+     MUXCY:CI->O           1   0.064   0.000  Mmult_step_1_mult0001_Madd14_cy<9> (Mmult_step_1_mult0001_Madd14_cy<9>)
+     MUXCY:CI->O           1   0.064   0.000  Mmult_step_1_mult0001_Madd14_cy<10> (Mmult_step_1_mult0001_Madd14_cy<10>)
+     MUXCY:CI->O           1   0.064   0.000  Mmult_step_1_mult0001_Madd14_cy<11> (Mmult_step_1_mult0001_Madd14_cy<11>)
+     MUXCY:CI->O           1   0.064   0.000  Mmult_step_1_mult0001_Madd14_cy<12> (Mmult_step_1_mult0001_Madd14_cy<12>)
+     MUXCY:CI->O           1   0.064   0.000  Mmult_step_1_mult0001_Madd14_cy<13> (Mmult_step_1_mult0001_Madd14_cy<13>)
+     MUXCY:CI->O           1   0.064   0.000  Mmult_step_1_mult0001_Madd14_cy<14> (Mmult_step_1_mult0001_Madd14_cy<14>)
+     MUXCY:CI->O           1   0.064   0.000  Mmult_step_1_mult0001_Madd14_cy<15> (Mmult_step_1_mult0001_Madd14_cy<15>)
+     MUXCY:CI->O           1   0.064   0.000  Mmult_step_1_mult0001_Madd14_cy<16> (Mmult_step_1_mult0001_Madd14_cy<16>)
+     MUXCY:CI->O           1   0.064   0.000  Mmult_step_1_mult0001_Madd14_cy<17> (Mmult_step_1_mult0001_Madd14_cy<17>)
+     MUXCY:CI->O           1   0.064   0.000  Mmult_step_1_mult0001_Madd14_cy<18> (Mmult_step_1_mult0001_Madd14_cy<18>)
+     MUXCY:CI->O           1   0.064   0.000  Mmult_step_1_mult0001_Madd14_cy<19> (Mmult_step_1_mult0001_Madd14_cy<19>)
+     MUXCY:CI->O           1   0.064   0.000  Mmult_step_1_mult0001_Madd14_cy<20> (Mmult_step_1_mult0001_Madd14_cy<20>)
+     MUXCY:CI->O           1   0.064   0.000  Mmult_step_1_mult0001_Madd14_cy<21> (Mmult_step_1_mult0001_Madd14_cy<21>)
+     MUXCY:CI->O           1   0.064   0.000  Mmult_step_1_mult0001_Madd14_cy<22> (Mmult_step_1_mult0001_Madd14_cy<22>)
+     MUXCY:CI->O           1   0.064   0.000  Mmult_step_1_mult0001_Madd14_cy<23> (Mmult_step_1_mult0001_Madd14_cy<23>)
+     MUXCY:CI->O           1   0.064   0.000  Mmult_step_1_mult0001_Madd14_cy<24> (Mmult_step_1_mult0001_Madd14_cy<24>)
+     XORCY:CI->O           1   0.904   1.140  Mmult_step_1_mult0001_Madd14_xor<25> (Mmult_step_1_mult0001_Madd_2714)
+     LUT2:I0->O            1   0.551   0.000  Mmult_step_1_mult0001_Madd22_lut<27> (Mmult_step_1_mult0001_Madd22_lut<27>)
+     MUXCY:S->O            1   0.500   0.000  Mmult_step_1_mult0001_Madd22_cy<27> (Mmult_step_1_mult0001_Madd22_cy<27>)
+     XORCY:CI->O           1   0.904   0.996  Mmult_step_1_mult0001_Madd22_xor<28> (Mmult_step_1_mult0001_Madd_2822)
+     LUT2:I1->O            1   0.551   0.000  Mmult_step_1_mult0001_Madd27_lut<28> (Mmult_step_1_mult0001_Madd27_lut<28>)
+     MUXCY:S->O            1   0.500   0.000  Mmult_step_1_mult0001_Madd27_cy<28> (Mmult_step_1_mult0001_Madd27_cy<28>)
+     XORCY:CI->O           1   0.904   0.996  Mmult_step_1_mult0001_Madd27_xor<29> (Mmult_step_1_mult0001_Madd_2927)
+     LUT2:I1->O            1   0.551   0.000  Mmult_step_1_mult0001_Madd29_lut<29> (Mmult_step_1_mult0001_Madd29_lut<29>)
+     MUXCY:S->O            1   0.500   0.000  Mmult_step_1_mult0001_Madd29_cy<29> (Mmult_step_1_mult0001_Madd29_cy<29>)
+     XORCY:CI->O           1   0.904   0.996  Mmult_step_1_mult0001_Madd29_xor<30> (Mmult_step_1_mult0001_Madd_3029)
+     LUT2:I1->O            1   0.551   0.000  Mmult_step_1_mult0001_Madd30_lut<30> (Mmult_step_1_mult0001_Madd30_lut<30>)
+     MUXCY:S->O            0   0.500   0.000  Mmult_step_1_mult0001_Madd30_cy<30> (Mmult_step_1_mult0001_Madd30_cy<30>)
+     XORCY:CI->O           1   0.904   0.000  Mmult_step_1_mult0001_Madd30_xor<31> (Mmult_step_1_mult0001_Madd_3139)
+     FD:D                      0.203          Mmult_step_1_mult0001_32
+    ----------------------------------------
+    Total                     18.440ns (12.143ns logic, 6.297ns route)
+                                       (65.9% logic, 34.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 32 / 32
+-------------------------------------------------------------------------
+Offset:              7.165ns (Levels of Logic = 1)
+  Source:            C_31 (FF)
+  Destination:       C<31> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: C_31 to C<31>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.720   0.801  C_31 (C_31)
+     OBUF:I->O                 5.644          C_31_OBUF (C<31>)
+    ----------------------------------------
+    Total                      7.165ns (6.364ns logic, 0.801ns route)
+                                       (88.8% logic, 11.2% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 12.00 secs
+Total CPU time to Xst completion: 11.96 secs
+ 
+--> 
+
+Total memory usage is 323004 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   35 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
+

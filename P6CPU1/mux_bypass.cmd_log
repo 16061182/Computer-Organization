@@ -1,0 +1,1 @@
+vhdtdtfi -lang verilog -prj P6CPU1 -o E:/ISEproject/P6CPU1/mux_bypass.tfi -lib work E:/ISEproject/P6CPU1//mux.v -module mux_bypass -template D:/ISE/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 

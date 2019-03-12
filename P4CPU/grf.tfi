@@ -1,0 +1,18 @@
+
+
+
+// Instantiate the module
+grf instance_name (
+    .grf_pc(grf_pc), 
+    .grf_Rreg1(grf_Rreg1), 
+    .grf_Rreg2(grf_Rreg2), 
+    .grf_Wreg(grf_Wreg), 
+    .grf_Wdata(grf_Wdata), 
+    .grf_RegWrite(grf_RegWrite), 
+    .grf_clk(grf_clk), 
+    .grf_reset(grf_reset), 
+    .grf_Rdata1(grf_Rdata1), 
+    .grf_Rdata2(grf_Rdata2)
+    );
+
+

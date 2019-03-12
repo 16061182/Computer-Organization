@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "E:/ISEproject/buma1/buma1.xst" -ofn "E:/ISEproject/buma1/buma1.syr" 

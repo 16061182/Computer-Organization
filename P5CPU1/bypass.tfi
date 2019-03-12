@@ -1,0 +1,17 @@
+
+
+
+// Instantiate the module
+bypass instance_name (
+    .ir_d(ir_d), 
+    .ir_e(ir_e), 
+    .ir_m(ir_m), 
+    .ir_w(ir_w), 
+    .rsd_sel(rsd_sel), 
+    .rtd_sel(rtd_sel), 
+    .rse_sel(rse_sel), 
+    .rte_sel(rte_sel), 
+    .rtm_sel(rtm_sel)
+    );
+
+

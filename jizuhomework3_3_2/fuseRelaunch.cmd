@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "E:/ISEproject/jizuhomework3_3_2/homeworktest_isim_beh.exe" -prj "E:/ISEproject/jizuhomework3_3_2/homeworktest_beh.prj" "work.homeworktest" "work.glbl" 

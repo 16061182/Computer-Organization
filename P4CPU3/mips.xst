@@ -1,0 +1,5 @@
+set -tmpdir "E:/ISEproject/P4CPU3/xst/projnav.tmp"
+set -xsthdpdir "E:/ISEproject/P4CPU3/xst"
+elaborate
+-ifn mips.prj
+-ifmt mixed

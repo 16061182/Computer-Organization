@@ -1,0 +1,11 @@
+
+
+
+// Instantiate the module
+cmp instance_name (
+    .rf_rd1(rf_rd1), 
+    .rf_rd2(rf_rd2), 
+    .beq(beq)
+    );
+
+

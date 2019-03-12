@@ -1,0 +1,23 @@
+
+
+
+// Instantiate the module
+DtoE instance_name (
+    .clk(clk), 
+    .reset(reset), 
+    .stall(stall), 
+    .ir(ir), 
+    .rf_rd1(rf_rd1), 
+    .rf_rd2(rf_rd2), 
+    .pc4(pc4), 
+    .pc8(pc8), 
+    .ir_e(ir_e), 
+    .rs_e(rs_e), 
+    .rt_e(rt_e), 
+    .ext0_e(ext0_e), 
+    .ext1_e(ext1_e), 
+    .pc4_e(pc4_e), 
+    .pc8_e(pc8_e)
+    );
+
+
